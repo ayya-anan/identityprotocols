@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityProtocols", "IdentityProtocols\IdentityProtocols.csproj", "{9AA0A430-47B4-4D4A-B269-FE580C70E435}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Oidc", "Oidc", "{5C117A6C-E610-4F0B-9F44-509B9FA1F174}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Saml", "Saml", "{7947A8D6-157D-488A-9294-7B6E91FB73E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WsFed", "WsFed", "{6F2028BC-726B-4060-A912-9B3BEBF0A511}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityProtocols.Oidc", "IdentityProtocols.Oidc\IdentityProtocols.Oidc.csproj", "{A244FB7C-9900-4647-8929-F4E22E3F3A8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityProtocols.Saml", "IdentityProtocols.Saml\IdentityProtocols.Saml.csproj", "{704A5B13-7AFC-4500-802A-3C75861209B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityProtocols.WsFed", "IdentityProtocols.WsFed\IdentityProtocols.WsFed.csproj", "{732687CE-C578-4DB7-960B-06F86D675FD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AA0A430-47B4-4D4A-B269-FE580C70E435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA0A430-47B4-4D4A-B269-FE580C70E435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AA0A430-47B4-4D4A-B269-FE580C70E435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA0A430-47B4-4D4A-B269-FE580C70E435}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A244FB7C-9900-4647-8929-F4E22E3F3A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A244FB7C-9900-4647-8929-F4E22E3F3A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A244FB7C-9900-4647-8929-F4E22E3F3A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A244FB7C-9900-4647-8929-F4E22E3F3A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{704A5B13-7AFC-4500-802A-3C75861209B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{704A5B13-7AFC-4500-802A-3C75861209B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{704A5B13-7AFC-4500-802A-3C75861209B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{704A5B13-7AFC-4500-802A-3C75861209B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{732687CE-C578-4DB7-960B-06F86D675FD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732687CE-C578-4DB7-960B-06F86D675FD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732687CE-C578-4DB7-960B-06F86D675FD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732687CE-C578-4DB7-960B-06F86D675FD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A244FB7C-9900-4647-8929-F4E22E3F3A8F} = {5C117A6C-E610-4F0B-9F44-509B9FA1F174}
+		{704A5B13-7AFC-4500-802A-3C75861209B3} = {7947A8D6-157D-488A-9294-7B6E91FB73E3}
+		{732687CE-C578-4DB7-960B-06F86D675FD3} = {6F2028BC-726B-4060-A912-9B3BEBF0A511}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7B97A9B-87B2-4B0D-AB5F-BC5EEA3F8C60}
+	EndGlobalSection
+EndGlobal
