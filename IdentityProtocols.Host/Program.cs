@@ -16,7 +16,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseOidcEndpoints(provider: app.Services);
+app.UseOidcEndpoints();
 
 app.UseRouting();
 

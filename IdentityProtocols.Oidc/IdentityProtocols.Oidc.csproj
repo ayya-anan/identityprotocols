@@ -14,4 +14,8 @@
     <ProjectReference Include="..\IdentityProtocols\IdentityProtocols.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Response\" />
+  </ItemGroup>
+
 </Project>

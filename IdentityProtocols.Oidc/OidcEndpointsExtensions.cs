@@ -16,16 +16,26 @@ namespace IdentityProtocols.Oidc
 {
     public static class OidcEndpointsExtensions
     {
-        public static void UseOidcEndpoints(this IApplicationBuilder applicationBuilder, IServiceProvider provider)
-        {            
-            var endpoints = new Dictionary<string, Type>();            
-            endpoints.Add(StandardEndpointRoutes.Authorize, typeof(IOidcAuthorizeHandler));                                          
+        public static void UseOidcEndpoints(this IApplicationBuilder applicationBuilder)
+        {
+            var endpoints = new Dictionary<string, Type>
+            {
+                { StandardEndpointRoutes.Authorize, typeof(IOidcAuthorizeHandler) },
+                { StandardEndpointRoutes.EndSession, typeof(IEndSessionHandler) },
+                { StandardEndpointRoutes.Jwks, typeof(IJwksHandler) },
+                { StandardEndpointRoutes.Token, typeof(ITokenHandler) },
+                { StandardEndpointRoutes.UserInfo, typeof(IUserInfoHandler) },
+            };
             applicationBuilder.UseDynamicEndpoints(endpoints);
         }
 
         public static void AddOidcEndpoints(this IServiceCollection  serviceCollection)
         {
             serviceCollection.AddScoped<IOidcAuthorizeHandler, AuthorizeHandler>();
+            serviceCollection.AddScoped<IEndSessionHandler, EndSessionHandler>();
+            serviceCollection.AddScoped<IJwksHandler, JwksHandler>();
+            serviceCollection.AddScoped<ITokenHandler, TokenHandler>();
+            serviceCollection.AddScoped<IUserInfoHandler, UserInfoHandler>();
         }
     }
     

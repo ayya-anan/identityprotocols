@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace IdentityProtocols.Oidc.Handlers
 {
-    public class AuthorizeHandler : IOidcAuthorizeHandler
+    public class TokenHandler : ITokenHandler
     {        
-        public AuthorizeHandler()
+        public TokenHandler()
         {
             
         }
        
         public async Task HandleAsync(IEndpointRequest request)
         {
-            await request.Context.Response.WriteAsync("This is from oidc authourize handler");
+            await request.Context.Response.WriteAsync("This is from token handler");
         }
     }
 }
