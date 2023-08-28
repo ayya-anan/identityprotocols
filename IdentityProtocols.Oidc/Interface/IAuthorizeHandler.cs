@@ -2,7 +2,7 @@
 
 namespace IdentityProtocols.Oidc.Interface
 {
-    internal interface IOidcAuthorizeHandler: IHandler
+    internal interface IAuthorizeHandler: IEndpointHandler
     {
     }
 }

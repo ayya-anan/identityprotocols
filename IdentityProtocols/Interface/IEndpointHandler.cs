@@ -7,7 +7,7 @@ using IdentityProtocols.Interface;
 
 namespace IdentityProtocols
 {
-    public interface IHandler
+    public interface IEndpointHandler
     {
         Task HandleAsync(IEndpointRequest request);
     }

@@ -2,7 +2,7 @@
 
 namespace IdentityProtocols.Oidc.Interface
 {
-    internal interface IEndSessionHandler: IHandler
+    internal interface IEndSessionHandler: IEndpointHandler
     {
     }
 }

@@ -2,7 +2,7 @@
 
 namespace IdentityProtocols.Oidc.Interface
 {
-    internal interface ITokenHandler: IHandler
+    internal interface ITokenHandler: IEndpointHandler
     {
     }
 }

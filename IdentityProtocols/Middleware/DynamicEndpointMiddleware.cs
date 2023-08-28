@@ -28,7 +28,7 @@ namespace IdentityProtocols.Middleware
         {
             if (context.Request.Path.HasValue && _handler.TryGetValue(context.Request.Path.Value.TrimStart(UrlConstants.Seprater), out var handlerType))
             {
-                var handler = serviceProvider.GetService(handlerType) as IHandler;
+                var handler = serviceProvider.GetService(handlerType) as IEndpointHandler;
                 if (handler != null)
                 {
                     var request = new EndpointRequest(context);

@@ -20,18 +20,20 @@ namespace IdentityProtocols.Oidc
         {
             var endpoints = new Dictionary<string, Type>
             {
-                { StandardEndpointRoutes.Authorize, typeof(IOidcAuthorizeHandler) },
-                { StandardEndpointRoutes.EndSession, typeof(IEndSessionHandler) },
-                { StandardEndpointRoutes.Jwks, typeof(IJwksHandler) },
-                { StandardEndpointRoutes.Token, typeof(ITokenHandler) },
-                { StandardEndpointRoutes.UserInfo, typeof(IUserInfoHandler) },
+                { EndpointRoutes.Authorize, typeof(IAuthorizeHandler) },
+                { EndpointRoutes.Discovery, typeof(IDiscoveryHandler) },
+                { EndpointRoutes.EndSession, typeof(IEndSessionHandler) },
+                { EndpointRoutes.Jwks, typeof(IJwksHandler) }, //TODO: This must match jwkskeys see .net
+                { EndpointRoutes.Token, typeof(ITokenHandler) },
+                { EndpointRoutes.UserInfo, typeof(IUserInfoHandler) },                
             };
             applicationBuilder.UseDynamicEndpoints(endpoints);
         }
 
         public static void AddOidcEndpoints(this IServiceCollection  serviceCollection)
         {
-            serviceCollection.AddScoped<IOidcAuthorizeHandler, AuthorizeHandler>();
+            serviceCollection.AddScoped<IAuthorizeHandler, AuthorizeHandler>();
+            serviceCollection.AddScoped<IDiscoveryHandler, DiscoveryHandler>();
             serviceCollection.AddScoped<IEndSessionHandler, EndSessionHandler>();
             serviceCollection.AddScoped<IJwksHandler, JwksHandler>();
             serviceCollection.AddScoped<ITokenHandler, TokenHandler>();

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace IdentityProtocols.Oidc.Handlers
 {
-    public class AuthorizeHandler : IOidcAuthorizeHandler
+    public class AuthorizeHandler : IAuthorizeHandler
     {        
         public AuthorizeHandler()
         {

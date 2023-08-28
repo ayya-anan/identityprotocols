@@ -2,7 +2,7 @@
 
 namespace IdentityProtocols.Oidc.Interface
 {
-    internal interface IUserInfoHandler: IHandler
+    internal interface IUserInfoHandler: IEndpointHandler
     {
     }
 }

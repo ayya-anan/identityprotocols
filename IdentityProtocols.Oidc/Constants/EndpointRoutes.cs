@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IdentityProtocols.Oidc.Constants
 {
-    public static class StandardEndpointRoutes
+    public static class EndpointRoutes
     {
         /// <summary>
         /// The URL where the authorization process is initiated.
@@ -27,6 +27,14 @@ namespace IdentityProtocols.Oidc.Constants
         /// <summary>
         /// The URL to retrieve the JSON Web Key Set containing the public keys.
         /// </summary>
-        public static string Jwks= "jwks";                
+        public static string Jwks= "jwks";
+
+
+
+
+        /// <summary>
+        /// Discovery end point 
+        /// </summary>
+        public static string Discovery = ".well-known/openid-configuration";
     }
 }

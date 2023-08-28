@@ -2,7 +2,7 @@
 
 namespace IdentityProtocols.Oidc.Interface
 {
-    internal interface IJwksHandler: IHandler
+    internal interface IJwksHandler: IEndpointHandler
     {
     }
 }
